@@ -1,0 +1,58 @@
+1. Design the Game Structure
+Divide the game into classes: Think about the entities in your game.
+A Sleigh for the player-controlled object.
+Obstacles like clouds and chimneys.
+A GameEngine class to handle the game logic.
+Use Object-Oriented Programming principles. Each entity should have its own class, with attributes and methods to control behavior.
+
+2. Game Board Representation
+Think of the game board as a grid (2D array).
+Use characters or symbols to represent different elements:
+'S' for the sleigh.
+'O' for obstacles.
+Empty spaces as ' '.
+Print the board each frame to show the game state.
+
+3. Player Movement
+The player should be able to move left and right within bounds.
+Use a variable, like positionX, to track the sleigh's horizontal position.
+Adjust this position based on user input ('a' for left, 'd' for right).
+
+4. Obstacle Behavior
+Obstacles should spawn at the top of the board and move downward each frame.
+Store obstacles in a list.
+Each obstacle has an x (horizontal) and y (vertical) position.
+Update their positions in a loop each frame.
+
+5. Collision Detection
+Check if any obstacle occupies the same position as the sleigh.
+If obstacle.x == sleigh.x && obstacle.y == sleigh.y, then it's a collision.
+End the game if a collision is detected.
+
+6. Random Spawning
+Use a random number generator to:
+Determine the horizontal position of each new obstacle.
+Randomly decide whether to spawn a cloud or a chimney.
+
+7. Game Loop
+Your game needs a loop to:
+Render the board (print it to the console).
+Update the positions of all obstacles.
+Accept user input and move the sleigh.
+Check for collisions.
+Increment the score over time.
+Use a condition, like a boolean gameOver flag, to exit the loop when the game ends.
+
+8. Delays and Input
+Add a small delay after each frame using Thread.sleep(milliseconds) to slow the game and make it playable.
+Use a scanner to take user input for movement in each frame.
+
+9. Scoring
+Keep a score variable that increases with every frame or successfully avoided obstacle.
+Display the score alongside the game board.
+
+10. Testing and Debugging
+Test the game frequently to ensure:
+Obstacles spawn correctly.
+Player input works as expected.
+Collisions are detected accurately.
