@@ -1,1 +1,19 @@
+class Obstacle {
+  public int posX;
+  public int posY;
 
+  public Obstacle(int posX, int posY)
+  {
+    this.posX = posX;
+    this.posY = posY;
+  }
+
+  public void movement(int changeX, int changeY)
+  {
+    posX = posX + changeX;
+    posY = posY + changeY;
+  }
+}
+
+
+  
